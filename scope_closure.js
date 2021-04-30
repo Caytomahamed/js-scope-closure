@@ -8,9 +8,9 @@
  * Study the code below for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * counter1 waaxa  closure kan  counter2 waxa waaye global scope 
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * iwaxa
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
 */
@@ -47,10 +47,12 @@ function motivation(firstname, lastname) {
 
   // code message function here.
 
-
+    function message(){
+    console.log("You're doing awesome, keep it up firstname lastname.")
+    }
   //Uncommment this to return the value of your invoked message function
   //return message();
-
+message()
 }
 
 motivation('Mohamed', 'Ali'); // 'You're doing awesome keep it up Mohamed Ali.
@@ -72,11 +74,19 @@ var allUsers = ["Ahmed", "Khadijo", "Farah", "Mahad", "Mohamed", "Bashir", "Ali"
 
 function findPotentialFriends(existingFriends) {
 
+  return function isNotAFriend() {
+      for (let i= 0; i < friends.length; i++) {
+        if (allUsers ===  friends) {
+          console.log("true");
+        } 
+      }
+  }
+  
 }
 
 var isNotAFriend = findPotentialFriends( friends );
-// isNotAFriend(allUsers[0]); // false
-// isNotAFriend(secondLevelFriends[2]); // true
+isNotAFriend(allUsers[0]); // false
+isNotAFriend(secondLevelFriends[2]); // true
 
 
 /******************************************************************************\
