@@ -8,11 +8,14 @@
  * Study the code below for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * counter1 waaxa  closure kan  counter2 waxa waaye global scope 
+ * counter1 waaxa  closure kan  counter2 waxa waaye function 
  * 2. Which of the two uses a closure? How can you tell?
- * iwaxa
+ * waxal loo istmaalaa in function lays dhexgaliyo iyo in aan function kore waxa kasoo jiidano
+ * waxa loo sheegaaa sida counter1 code ka oo kale 
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *counter1 in waxa lagu kaysado oo uu inoo celiyo waxaan ku kaydsanay inoo ilaakiya natiijada 
+ counter2 in loo  isticmaalo xayiraad code kaas oo loogu talagalay arin khaas ah 
 */
 
 // counter1 code
@@ -48,14 +51,13 @@ function motivation(firstname, lastname) {
   // code message function here.
 
     function message(){
-    console.log("You're doing awesome, keep it up firstname lastname.")
+   return `${welcomeText} ${firstname} ${lastname}`
     }
   //Uncommment this to return the value of your invoked message function
-  //return message();
-message()
+  return message();
 }
 
-motivation('Mohamed', 'Ali'); // 'You're doing awesome keep it up Mohamed Ali.
+console.log(motivation('Mohamed', 'Ali')); // 'You're doing awesome keep it up Mohamed Ali.
 
 
 /******************************************************************************\
